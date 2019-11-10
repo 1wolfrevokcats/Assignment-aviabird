@@ -88,7 +88,7 @@ function parseJsonFromArray(jsonArr) {
                 if (value.toString().match(RegExp('^[a-zA-Z]')) && (value.toString().indexOf(",") != -1)) {
                         value = ifArrayElement(value);
                 }
-                obj[key] = value;
+                obj[key.trim()] = value;
         }
         return obj;
 }
