@@ -7,7 +7,7 @@ fs.readFile("sample.txt", (err, data) => {
   fileData(data.toString());
 });
 
-// --------------- function to seperate the data line by line -----------------
+// --------------- function to separate the data line by line -----------------
 function fileData(data) {
   let newStringArray = [];
   let i = 0;
@@ -67,7 +67,7 @@ function fileData(data) {
   console.log(finalJsonObject);
 }
 
-/// function to extract data and seperate them as key and value
+/// function to extract data and separate them as key and value
 function parseJsonFromArray(jsonArr) {
   let obj = {};
   for (let item of jsonArr) {
@@ -84,7 +84,7 @@ function parseJsonFromArray(jsonArr) {
       value = Boolean(value);
     }
 
-    // --- check if string starts with character and contains comma seperated data
+    // --- check if string starts with character and contains comma separated data
     if (
       value.toString().match(/^[a-zA-Z]/) &&
       value.toString().indexOf(",") != -1
@@ -96,7 +96,7 @@ function parseJsonFromArray(jsonArr) {
   return obj;
 }
 
-/* ------ function to split comma seperated data and check if contains space in each item. 
+/* ------ function to split comma separated data and check if contains space in each item. 
 if space is present data is returned as string else as array. I.E to check data is array or not */
 function ifArrayElement(val) {
   let [...arr] = val.split(",");
