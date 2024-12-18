@@ -99,7 +99,7 @@ function parseJsonFromArray(jsonArr) {
 /* ------ function to split comma separated data and check if contains space in each item. 
 if space is present data is returned as string else as array. I.E to check data is array or not */
 function ifArrayElement(val) {
-  let arr = val.split(",");
+  let [...arr] = val.split(",");
   let flag = false;
   for (let item of arr) {
     if (item.trim().search(/\s/) != -1) flag = true;
